@@ -1,5 +1,7 @@
 window.onload = function(){
 
+  var shakeButton = document.querySelector('#shake')
+
   var canvas = document.querySelector('canvas');
   var context = canvas.getContext('2d');
   
@@ -54,6 +56,17 @@ window.onload = function(){
         break
     }
   })
+
+  var clearScreen = function(){
+    console.log('click')
+    context.fillStyle = 'white';
+    context.fillRect(0, 0, 600, 500);
+
+    context.beginPath();
+    context.moveTo(xCoord, yCoord);
+  } 
+
+  shakeButton.onclick = clearScreen;
 
 }
 
