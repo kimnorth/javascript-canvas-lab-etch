@@ -13,6 +13,19 @@ window.onload = function(){
   var move = function(x, y){
     xCoord += x;
     yCoord += y;
+
+    if(xCoord < 0){
+      xCoord = 0;
+    } else if (xCoord > 600) {
+      xCoord = 600;
+    }
+
+    if(yCoord < 0){
+      yCoord = 0;
+    } else if (yCoord > 500) {
+      yCoord = 500;
+    }
+
     context.lineTo(xCoord, yCoord);
     context.stroke();
   }
