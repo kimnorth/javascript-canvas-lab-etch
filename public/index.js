@@ -4,6 +4,9 @@ window.onload = function(){
 
   var canvas = document.querySelector('canvas');
   var context = canvas.getContext('2d');
+
+  context.fillStyle = 'white';
+  context.fillRect(0, 0, 600, 500);
   
   var xCoord = 0;
   var yCoord = 0;
